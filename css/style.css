@@ -1,0 +1,877 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;/* o width será a soma do conteúdo com a borda e o padding.*/
+}
+html,body{
+	width:100%;
+	height:100%;
+}
+header{
+	width: 100%;
+	padding: 20px 2%;
+	/*background-color: green;*/
+}
+.container{
+	width: 100%;
+	max-width: 1400px;
+	/*background-color: yellow;*/
+}
+.conteudoTotal{
+	width: 100%;
+	display: none;
+}
+.box-load{
+	width:100%;
+	height:100%;
+	position: absolute;
+	background-color:#ccc;
+	/*z-index: 5;*/
+}
+.box-load .pre{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 9px dotted green;
+	border-top-color:#ccc;
+	animation-name:animacao01;
+	animation-duration: 2s;
+	animation-iteration-count:infinite;
+	animation-timing-function:linear;
+	margin-left: 45%;
+	margin-top: 20%;
+}
+@keyframes animacao01{
+	100%{
+		transform:rotate(360deg);
+	}
+}
+.container .logo{
+	width: 200px;
+	height:85px;
+	float: left;
+	position: relative;
+}
+.logo img{
+	width: 100%;
+	height: 100%;
+}
+.logo a{
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	position:absolute;
+	left: 0;
+}
+.clear{
+	clear: both;
+}
+.container nav.desktop-menu{
+	float:right;
+	/*background-color: red;*/
+	opacity: 0.8;
+	position:relative;
+	top:34px;
+}
+.container nav.desktop-menu ul{
+	list-style-type:none;
+}
+nav.desktop-menu ul li{
+	display: inline-block;
+	margin-right: -4px;
+	padding: 0px 20px;
+}
+nav.desktop-menu ul li a{
+	font-size: 23px;
+	text-decoration: none;
+	color: black;
+}
+nav.mobile-menu{
+	display: none;
+	float: right;
+	width: 32px;
+	height: 32px;
+	background-image: url('../Imagens/icon_menu.png');
+	background-repeat: no-repeat;
+	margin-top: 30px;
+	cursor: pointer;
+}
+nav.mobile-menu ul{
+	width: 100%;
+	position: absolute;
+	z-index:3;/*para ficar maior que o título do Veículos a venda.*/
+	left: 0;
+	top: 120px;
+	background-color: #ccc;
+	text-align: center;
+	opacity: 0;
+	transition: 1.5s;
+}
+nav.mobile-menu ul li{
+	font-size: 19px;
+	padding: 6px 0px;
+}
+nav.mobile-menu ul li a{
+	text-decoration: none;
+}
+nav.mobile-menu ul li a:hover{
+	text-decoration:underline;
+   font-style: italic;
+}
+/*main{
+	width: 100%;
+	height: 460px;
+	background-color: #000;
+	position: relative;
+}*/
+main section.menu-fotoGcarro{
+	width: 100%;
+	background-color: #000;
+	position: relative;
+}
+section.menu-fotoGcarro .opcoes-main{
+	width: 40%;
+	height: 90%;
+	background-color:none;
+	opacity: 0.6;
+	float:left;
+	position: absolute;
+	left: 50px;
+}
+.opcoes-main .text-banner{
+	padding: 100px 80px 100px 110px;
+}
+.text-banner .text-banner-single/*:not(:last-of-type)*/{
+	background-image: url('../Imagens/box-text.png');
+	background-size: 100% 100%;
+	background-position: center;
+	font-size: 1.9em;
+	padding: 8px 20px;
+	margin-bottom: 4px;
+	color: white;
+	font-style: italic;
+}
+.text-banner-single:nth-of-type(1){
+	width: 260px;
+	margin-left: 2px;
+}
+.text-banner-single:nth-of-type(2){
+	width: 200px;
+	margin-left:-6px;
+}
+.text-banner-single:nth-of-type(3){
+	width: 180px;
+	margin-left: -12px;
+}
+.text-banner-single:nth-of-type(4){
+	width: 390px;
+	margin-left: -24px;
+	background-image: url('../Imagens/box-white-text.png');
+	background-size: 100% 100%;
+	background-position: center;
+	color: black;
+	font-size: 1em;
+}
+section.menu-fotoGcarro .carroMain{
+	width: 60%;
+	/*height: 100%;
+	background-image: url('../Imagens/bg.jpg');
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;*/
+	float:right;
+}
+.carroMain .carroMain01{
+   width: 100%;
+}
+.carroMain01 .carroMain02{
+  width: 100%;
+}
+.carroMain02 .carroMain03{
+  width: 100%;
+  padding-top:56%;
+  background-image: url('../Imagens/bg.jpg');
+  background-size: 100% 100%;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+main section.veiculos-em-destaque{
+	width:100%;
+	padding:40px 0px;
+}
+section.veiculos-em-destaque .veiculos-destaque-wrapper{
+	width: 90%;
+	max-width: 800px;
+	height: 380px;
+	margin: 0 auto;
+}
+/*.veiculos-destaque-wrapper*/ .line-titulo{
+	width: 100%;
+	height: 50px;
+	position: relative;
+}
+.line-titulo .ln1{
+	width: 100%;
+	border: 1px solid black;
+	position: absolute;
+	left: 0;
+	top: 50%;
+}
+.line-titulo h2{
+	position: absolute;
+	z-index: 2;
+	background-color: white;
+	text-align: center;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 6px 9px;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+/*.veiculos-destaque-wrapper*/ .veiculos-destaque-wrapper02{
+	width: 100%;
+	height: 330px;
+	/*background-color:pink;*/
+}
+.veiculos-destaque-wrapper02 .veiculo-single{
+	width: calc(100% / 3);
+	height: 100%;
+	padding: 1%;
+	float: left;
+}
+.veiculo-single .img-carro{
+	width: 100%;
+	height: 50%;
+	background-image: url('../Imagens/carro1.jpg');
+	background-size:  100% 100%;
+	background-position: center;
+}
+.veiculo-single .info-carro{
+	padding-top: 10px;
+	line-height:25px;
+}
+/*.veiculo-single >*/ input[type=submit]{
+   padding: 6px 8px;
+   font-size: 17px;
+   font-style: italic;
+   color: white;
+   background-color: red;
+   border: 0;
+   cursor: pointer;
+}
+section.sessao2{
+	width: 100%;
+	background-color: gold;
+	display: flex;
+}
+section.sessao2 .servicos{
+	width: 50%;
+	padding: 100px 0px;
+	background-color: #000;
+	float: left;
+	align-content:stretch;
+}
+.servicos .servicos-wrapper{
+	width: 70%;
+	color: white;
+	margin: 0 auto;
+}
+.servicos-wrapper h2{
+	margin-bottom: 10px;
+}
+.servicos-wrapper ul{
+	list-style-position:inside;
+	display: inline-block;
+	margin-right: -4px;
+}
+.servicos-wrapper ul li{
+	font-size: 20px;
+	font-style: monospace;
+}
+.servicos-wrapper input[type=submit]{
+  display: inline-block;
+  margin-right: -4px;
+  margin-left: 20px;
+}
+section.sessao2 .depoimentos{
+	width: 50%;
+	padding: 100px 0px;
+	background-color:red;
+	float: right;
+	align-content:stretch;
+}
+.depoimentos .depoimentos-wrapper{
+	width:80%;
+	margin: 0 auto;
+}
+ .depoimentos-wrapper h2{
+	color: white;
+	margin-bottom: 10px;
+}
+.depoimentos-wrapper .scroll-equipe{
+	width:100%;
+	overflow:hidden;
+}
+.depoimentos-wrapper .scroll-equipe02{
+	width:600px;
+}
+.depoimentos-wrapper .setas{
+  margin-top: 20px;
+}
+.setas .seta-esq{
+	width: 30px;
+	height: 30px;
+	background-image: url('../Imagens/arrow-left.png');
+	background-size: 100% 100%;
+	background-position: center;
+	display: inline-block;
+	margin-right: -4px;
+	cursor: pointer;
+}
+.setas .seta-dir{
+	width: 30px;
+	height: 30px;
+	background-image: url('../Imagens/arrow-right.png');
+	background-size: 100% 100%;
+	background-position: center;
+	display: inline-block;
+	margin-right: -4px;
+	margin-left: 8px;
+	cursor: pointer;
+}
+.depoimentos-wrapper	.depoimento-single{
+	/*width:100%;*/
+	float: left;
+	padding-left: 20px;
+}
+.depoimento-single p{
+	color: white;
+	font-size:18px;
+	text-align: justify;
+	font-family:sans-serif;
+}
+.depoimento-single p:last-of-type{
+	margin-top: 25px;
+	float: right;
+	color: black;
+	font-weight: bold;
+	font-family:sans-serif;
+}
+section.sessao3{
+	width: 100%;
+	padding: 100px 0px;
+}
+section.sessao3 .container-form{
+	width: 70%;
+	max-width: 500px;
+	margin: 0 auto;
+}
+.container-form form{
+  width: 100%;
+}
+form fieldset{
+	width: 100%;
+	border: 0;
+}
+.w100{
+	width:100%;
+	height:35px;
+	margin-bottom: 20px;
+}
+.w50{
+	width: 48%;
+	height: 35px;
+	background-color: pink;
+}
+.w50:nth-of-type(1){
+	float:left;
+}
+.w50:nth-of-type(2){
+	float:right;
+}
+form fieldset input[type=text]{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ccc;
+	font-size: 20px;
+	padding-left: 4px;
+}
+form fieldset input[type=text]:focus,
+.container-form form fieldset textarea:focus{
+	outline: 0;
+} 
+.container-form form fieldset textarea{
+	width: 100%;
+	height: 200px;
+	resize: none;
+	margin-top: 20px;
+	border: 1px solid #ccc;
+	font-size: 20px;
+	padding-left: 4px;
+}
+.container-form form fieldset input[type=submit]{
+	display: block;
+	margin: 20px auto 0px auto;
+}
+footer{
+	width:100%;
+	background-color:black;
+	padding: 20px 2%;
+}
+footer .container nav.desktop-menu{
+	float: left;
+	position:inherit;
+}
+/*.container nav.desktop-menu{
+	float:right;
+	background-color: red;
+	opacity: 0.8;
+	position:relative;
+	top:34px;
+}*/
+footer .container nav.desktop-menu ul li{
+	padding: 0px 10px;
+}
+footer .container nav.desktop-menu ul li a{
+	font-size: 14px;
+	color: white;
+	text-transform: uppercase;
+	font-family: arial;
+}
+footer .container .direitos{
+	float: right;
+	font-size: 15px;
+	color: white;
+	font-family: arial;
+}
+footer .container .direitos span{
+	font-weight: bold;
+}
+/*vendas.html*/
+.container .veiculos-a-venda{
+	width: 100%;
+	padding: 60px 2%;
+}
+.veiculos-a-venda .barraDePreco-e-veiculos{
+   width: 100%;
+   padding-top:30px;
+}
+.barraDePreco-e-veiculos .barraDePreco{
+	width: 30%;
+	max-width: 400px;
+	float: left;
+}
+.barraDePreco .barraDePreco01{
+  padding: 0px 2%;
+}
+.barraDePreco .barraDePreco01 h2{
+	font-size: 18px;
+	font-family:tahoma;
+}
+.barraDePreco01 .barra{
+	width: 100%;
+	height: 25px;
+	border-radius:4px;
+	border: 1px solid black;
+	margin-top: 15px;
+	position: relative;
+}
+.barra .barraProgresso{
+	width:0px;
+	height: 100%;
+	background-color:gray;
+	border-radius:4px;
+	position: absolute;
+	z-index: 1;
+}
+.barra .botaoBarra{
+	width: 50px;
+	height: 80%;
+	border: 1px solid black;
+	background-color: #ccc;
+	border-radius: 10px;
+   position: absolute;
+   left:0px;
+   top: 50%;
+	z-index: 2;
+	cursor: pointer;
+	transform: translateY(-50%);
+}
+.barraDePreco01 .preco-botao{
+	width: 100%;
+	margin-top: 15px;
+}
+.preco-botao span{
+	font-weight: bold;
+	font-size:17px;
+}
+.preco-botao span:first-of-type{
+	float: left;
+}
+.preco-botao span:last-of-type{
+	float: right;
+}
+.barraDePreco01 .filtre-por-ano{
+	width: 100%;
+	margin-top: 12px;
+}
+.filtre-por-ano h2{
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-family:tahoma;
+}
+.filtre-por-ano form fieldset label{
+	font-weight: bold;
+	font-size: 18px;
+}
+.barraDePreco-e-veiculos .veiculos{
+	width: 70%;
+	float: right;
+}
+.veiculos .veiculos-destaque-wrapper02{
+	margin-bottom: 20px;
+}
+/*galeria.html*/
+main .container .galeria-img{
+	width: 100%;
+	padding:60px 2%;
+}
+.galeria-img .galeria-single{
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+/*.galeria-single*/ .img-grande{
+	width:100%;
+	padding-top:50%;
+	/*background-color:gold;*/
+	border: 8px solid #ccc;
+}
+.galeria-single .varias-img{
+	width: 100%;
+}
+.varias-img .varias-img-single{
+	width: calc(100% / 4);
+	background-color: gold;
+	display: inline-block;
+	margin-right: -4px;
+}
+.varias-img-single .img{
+	width: 100%;
+	padding-top: 80%;
+	background-color: black;
+	border:7px solid white;
+	cursor: pointer;
+}
+.img-single1, .img-single5, .img-single9{
+	width: 100%;
+	height: 100%;
+	background-image: url('../Imagens/fiat-uno-anos-80.png');
+	background-size: 100% 100%;
+	background-position: center;
+}
+.img-single2, .img-single12, .img-single6{
+	width: 100%;
+	height: 100%;
+	background-image: url('../Imagens/chevrolet-vectra-azul-anos90.jpg');
+	background-size: 100% 100%;
+	background-position: center;
+}
+.img-single3, .img-single7, .img-single11{
+	width: 100%;
+	height: 100%;
+	background-image: url('../Imagens/carro1.jpg');
+	background-size: 100% 100%;
+	background-position: center;
+}
+.img-single4, .img-single10, .img-single8{
+	width: 100%;
+	height: 100%;
+	background-image: url('../Imagens/Marea-Turbo-anos90.jpg');
+	background-size: 100% 100%;
+	background-position: center;
+}
+/*Eventos.html*/
+main .container .eventos{
+	width: 100%;
+	padding: 60px 2%;
+}
+.eventos .eventos-single{
+	width: 100%;
+}
+.eventos-single .meses-e-listaDeEventos{
+	width: 100%;
+	margin-top: 30px;
+}
+.meses-e-listaDeEventos .meses{
+	width: 30%;
+	float: left;
+}
+.meses-e-listaDeEventos .listaDeEventos{
+  width: 70%;
+  float: right;
+}
+.listaDeEventos .mini-lista-de-eventos{
+	width: 100%;
+	background-color: brown;
+	margin-bottom: 20px;
+}
+.mini-lista-de-eventos .evento-single{
+	width:calc(100% / 3);
+	padding: 2px;
+	float: left;
+	border: 6px solid white;
+}
+.evento-single .img-evento{
+	width: 100%;
+	padding-top:60%;
+	background-color:#ccc;
+}
+.evento-single .info-evento{
+  width: 100%;
+}
+/*sobreNos.html*/
+.container .sobre-nos-wrapper{
+	width: 100%;
+	padding: 0px 3% 0px 2%;
+}
+.sobre-nos-wrapper .sobre-nos-single{
+	width: 100%;
+	padding: 60px 0px;
+}
+.sobre-nos-single .sobre{
+	width: 80%;
+	max-width: 700px;
+	margin:30px auto 0px auto;
+}
+.sobre .sobre-img{
+
+}
+.sobre .sobre-RM-veiculos{
+  width: 100%;
+  text-align: justify; 
+  margin-top: 20px;
+  color: gray;
+}
+.sobre-RM-veiculos h2{
+	margin-bottom: 12px;
+	font-size:30px;
+}
+.sobre-RM-veiculos p{
+	font-size:17px;
+	font-family: tahoma;
+	line-height: 24px;
+}
+.sobre-RM-veiculos .img-texto{
+	width: 100%;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: row;
+}
+.img-texto .img-single-texto{
+	width:40%;
+	height: 200px;
+	background-color:red;
+	border: 9px solid white;
+}
+.img-texto .single-texto{
+	width:60%;
+}
+@media screen and (max-width: 940px){
+   header .container nav.desktop-menu{
+		display: none;
+	}
+	.container nav.mobile-menu{
+		display: block;
+		float: right;
+	}
+	nav.mobile-menu:hover ul{
+		opacity: 1;
+	}
+	section.menu-fotoGcarro .opcoes-main{
+		width: 90%;
+		float:none;
+		position: absolute;
+		left:30px;
+	}
+	.opcoes-main .text-banner{
+		padding: 10px;
+	}
+	section.menu-fotoGcarro .carroMain{
+		width: 90%;
+		/*height:100%;*/
+		background-image: url('../Imagens/bg.jpg');
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		float:none;
+		margin: 0 auto;
+	}
+	section.sessao2{
+		width: 100%;
+		background-color: gold;
+		display: block;
+	}
+	section.sessao2 .servicos{
+		width: 100%;
+		padding: 60px 0px;
+		background-color: #000;
+		float:none;
+		align-content:stretch;
+	}
+	section.sessao2 .depoimentos{
+		width: 100%;
+		padding: 60px 0px;
+		background-color:red;
+		float:none;
+		align-content:stretch;
+	}
+	footer .container nav.desktop-menu{
+		float:none;
+		text-align: center;
+	}
+	footer .container .direitos{
+		float:none;
+		text-align: center;
+		margin-top: 12px;
+	}
+}
+@media screen and (max-width:  700px){
+   .barraDePreco-e-veiculos .barraDePreco{
+		width: 100%;
+		max-width:none;
+		float:none;
+	}
+	.barraDePreco-e-veiculos .veiculos{
+		width: 100%;
+		float:none;
+		margin-top: 20px;
+	}
+	.galeria-img .galeria-single{
+		width: 100%;
+	}
+	/*Eventos*/
+	.meses-e-listaDeEventos .meses{
+		width:100%;
+		float:none;
+		text-align: center;
+	}
+	.meses .meses-single{
+		width: auto;
+		display: inline-block;
+		text-align: left;
+	}
+	.meses-e-listaDeEventos .listaDeEventos{
+	  width:100%;
+	  float:none;
+	}
+}
+@media screen and (max-width:  600px){
+	.servicos .servicos-wrapper{
+		width: 90%;
+		color: white;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.servicos-wrapper ul{
+		display: inline-block;
+		text-align: left;
+	}
+	.servicos-wrapper input[type=submit]{
+		display: block;
+		margin: 15px auto 0px  auto;
+	}
+	.carroMain02 .carroMain03{
+	  height: 350px;
+	}
+	section.sessao3 .container-form{
+		width: 90%;
+		max-width:none;
+		margin: 0 auto;
+	}
+	.w100{
+		width:100%;
+		height:35px;
+		margin-top:30px;
+	}
+	/*sobrenos.html*/
+	.sobre-RM-veiculos .img-texto{
+		display:block;
+	}
+	.img-texto .img-single-texto{
+		width:100%;
+		height: 200px;
+		margin: 0 auto;
+	}
+	.img-texto .single-texto{
+		width:100%;
+	}
+}
+@media screen and (max-width:  460px){
+	.opcoes-main .text-banner{
+		width: 100%;
+		/*padding: 100px 80px 100px 110px;*/
+		font-size: 15px;
+	}
+	.text-banner-single:nth-of-type(4){
+		width:100%;
+		margin-left: -24px;
+		background-image: url('../Imagens/box-white-text.png');
+		background-size: 100% 100%;
+		background-position: center;
+		color: black;
+		font-size:0.8em;
+	}/**/
+	.veiculos-destaque-wrapper02 .veiculo-single:nth-of-type(3){
+		display: none;
+	}
+	.veiculos-destaque-wrapper02 .veiculo-single{
+		width: calc(100% / 2);
+		height: 100%;
+		padding: 1%;
+		float: left;
+	}
+	.w50{
+		width: 100%;
+		float:left;
+		margin-bottom: 20px;
+	}
+   /*Eventos.html*/
+   .mini-lista-de-eventos .evento-single{
+		width:calc(100% / 2);
+		float: left;
+	}
+	.mini-lista-de-eventos .evento-single:last-of-type{
+		display: none;
+	}
+	
+}
+@media screen and (max-width:  340px){
+	section.menu-fotoGcarro .opcoes-main{
+		width: 90%;
+		height: 60%;
+		/*background-color:gray;
+		opacity: 0.6;*/
+		float:none;
+		position: absolute;
+		left:18px;
+	}
+	.text-banner .text-banner-single:nth-of-type(1){
+		width: 100%;
+      font-size: 1.6em;
+	}
+	.text-banner-single:nth-of-type(4){
+		width:100%;
+		margin-left: -24px;
+		background-image: url('../Imagens/box-white-text.png');
+		background-size: 100% 100%;
+		background-position: center;
+		color: black;
+		font-size:0.7em;
+	}
+	footer .container nav.desktop-menu ul li{
+		padding: 5px 8px;
+	}
+}
